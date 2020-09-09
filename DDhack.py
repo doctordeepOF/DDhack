@@ -1,0 +1,45 @@
+import subprocess 
+print ("   ■■■■■■       ■■■■■■")
+print ("   ■        ■     ■        ■                       ■■■   ■    ■")
+print ("   ■        ■     ■        ■   ■  ■      ■      ■        ■  ■")
+print ("   ■        ■     ■        ■   ■■■     ■■■    ■        ■■■ ")
+print ("   ■        ■     ■        ■   ■  ■    ■  ■      ■■■   ■    ■")
+print ("   ■■■■■■       ■■■■■■")
+print ("        ________________")
+print ("        |              |")
+print ("        | 1.ping scan  |")
+print ("        | 2.weechat    |")
+print ("        | 3.ngrok      |")
+print ("        | 4.sqlmap     |")
+print ("        |______________|")
+cool = int(input("escolha: "))
+if cool==1:
+    comando = subprocess.call(["clear"], shell=True)
+    print ("<><><><><><<<<<>>>>>><><><><><>")
+    print ("<>   PING SCAN by doctor deep<>")
+    print ("<><><><><><<<<<>>>>>><><><><><>")
+    cool2 = input("site: ")
+    print ("ping "+cool2)
+    comando = subprocess.call(["ping "+cool2], shell=True)
+elif cool==2:
+    comando = subprocess.call(["clear"], shell=True)
+    print ("<><><><><><<<<<>>>>>><><><><><>")
+    print ("<>   WEECHAT by doctor deep<>")
+    print ("<><><><><><<<<<>>>>>><><><><><>")
+    omando = subprocess.call(["weechat"], shell=True)
+elif cool==3:
+    comando = subprocess.call(["clear"], shell=True)
+    print ("<><><><><><<<<<>>>>>><><><><><>")
+    print ("<>   Ngrok by doctor deep<>")
+    print ("<><><><><><<<<<>>>>>><><><><><>")
+    local = input("1.http 2.tcp: ")
+    porta = input("escolha uma porta: ")
+    comando = subprocess.call(["./ngrok "+local+" "+porta], shell=True)
+elif cool==4:
+    print ("<><><><><><<<<<>>>>>><><><><><>")
+    print ("<>   SQLMAP by doctor deep   <>")
+    print ("<><><><><><<<<<>>>>>><><><><><>")
+    comando = subprocess.call(["cd sqlmap && python sqlmap.py"], shell=True)
+
+    
+
